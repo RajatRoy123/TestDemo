@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.8 on win32)" generated="20210108 20:17:34.241" rpa="false">
+<suite id="s1" name="TestSuite" source="C:\Users\royra\PycharmProjects\ContactAppAutomation2\TestSuite">
+<kw name="Run Keyword" library="BuiltIn" type="setup">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>AppLaunch</arg>
+</arguments>
+<kw name="AppLaunch" library="App">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${Server_url}</arg>
+<arg>udid=${capabilities['udid']}</arg>
+<arg>platformName=${capabilities['platformName']}</arg>
+<arg>alias=${capabilities['alias']}</arg>
+<arg>appPackage=${capabilities['appPackage']}</arg>
+<arg>appActivity=${capabilities['appActivity']}</arg>
+</arguments>
+<status status="PASS" starttime="20210108 20:17:34.404" endtime="20210108 20:17:50.312"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:17:34.404" endtime="20210108 20:17:50.312"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:17:34.404" endtime="20210108 20:17:50.312"></status>
+</kw>
+<suite id="s1-s1" name="Demo" source="C:\Users\royra\PycharmProjects\ContactAppAutomation2\TestSuite\Demo.robot">
+<test id="s1-s1-t1" name="TestCase02-AddContact">
+<kw name="Launching Contact Page" library="App">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Start}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210108 20:17:50.325" endtime="20210108 20:17:52.472"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Start}</arg>
+</arguments>
+<msg timestamp="20210108 20:17:52.476" level="INFO">Clicking element '//android.widget.TextView[@text='START']'.</msg>
+<status status="PASS" starttime="20210108 20:17:52.472" endtime="20210108 20:17:53.262"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${plusbutton}</arg>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20210108 20:17:53.262" endtime="20210108 20:17:59.833"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${plusbutton}</arg>
+</arguments>
+<msg timestamp="20210108 20:17:59.836" level="INFO">Clicking element 'id=com.samsung.android.contacts:id/floating_action_button'.</msg>
+<status status="PASS" starttime="20210108 20:17:59.833" endtime="20210108 20:18:00.005"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210108 20:18:10.020" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210108 20:18:00.005" endtime="20210108 20:18:10.020"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@text='Phone']</arg>
+</arguments>
+<msg timestamp="20210108 20:18:10.022" level="INFO">Clicking element '//*[@text='Phone']'.</msg>
+<status status="PASS" starttime="20210108 20:18:10.021" endtime="20210108 20:18:10.363"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Select}</arg>
+</arguments>
+<msg timestamp="20210108 20:18:10.365" level="INFO">Clicking element 'id=android:id/button2'.</msg>
+<status status="PASS" starttime="20210108 20:18:10.364" endtime="20210108 20:18:11.134"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:17:50.325" endtime="20210108 20:18:11.134"></status>
+</kw>
+<kw name="Random String" library="Generate_Data">
+<assign>
+<var>${ContactName}</var>
+</assign>
+<msg timestamp="20210108 20:18:11.135" level="INFO">${ContactName} = zDJXNwAGTv</msg>
+<status status="PASS" starttime="20210108 20:18:11.135" endtime="20210108 20:18:11.135"></status>
+</kw>
+<kw name="Randomnumber" library="Generate_Data">
+<assign>
+<var>${ContactNumber}</var>
+</assign>
+<msg timestamp="20210108 20:18:11.136" level="INFO">${ContactNumber} = 2272044916</msg>
+<status status="PASS" starttime="20210108 20:18:11.136" endtime="20210108 20:18:11.136"></status>
+</kw>
+<kw name="Enter Name and Phone Number" library="App">
+<arguments>
+<arg>${ContactName}</arg>
+<arg>${ContactNumber}</arg>
+</arguments>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.EditText[@text='Name']</arg>
+<arg>${ContactName}</arg>
+</arguments>
+<msg timestamp="20210108 20:18:11.139" level="INFO">Typing text 'zDJXNwAGTv' into text field '//android.widget.EditText[@text='Name']'</msg>
+<status status="PASS" starttime="20210108 20:18:11.137" endtime="20210108 20:18:13.930"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.EditText[@text='Phone']</arg>
+<arg>${ContactNumber}</arg>
+</arguments>
+<msg timestamp="20210108 20:18:13.933" level="INFO">Typing text '2272044916' into text field '//android.widget.EditText[@text='Phone']'</msg>
+<status status="PASS" starttime="20210108 20:18:13.930" endtime="20210108 20:18:15.116"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:18:11.136" endtime="20210108 20:18:15.117"></status>
+</kw>
+<kw name="Clicking Save Button" library="App">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${save}</arg>
+</arguments>
+<msg timestamp="20210108 20:18:15.118" level="INFO">Clicking element 'com.samsung.android.contacts:id/menu_done'.</msg>
+<status status="PASS" starttime="20210108 20:18:15.118" endtime="20210108 20:18:15.723"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:18:15.117" endtime="20210108 20:18:15.723"></status>
+</kw>
+<tags>
+<tag>Contact</tag>
+<tag>Positive</tag>
+<tag>Proxima</tag>
+<tag>Sanity</tag>
+</tags>
+<status status="PASS" starttime="20210108 20:17:50.324" endtime="20210108 20:18:15.724" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210108 20:17:50.312" endtime="20210108 20:18:15.725"></status>
+</suite>
+<kw name="Run Keyword" library="BuiltIn" type="teardown">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Kill Application</arg>
+</arguments>
+<kw name="Kill Application" library="App">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210108 20:18:15.728" endtime="20210108 20:18:16.202"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:18:15.728" endtime="20210108 20:18:16.202"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:18:15.728" endtime="20210108 20:18:16.202"></status>
+</kw>
+<status status="PASS" starttime="20210108 20:17:34.243" endtime="20210108 20:18:16.202"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Contact</stat>
+<stat pass="1" fail="0">Positive</stat>
+<stat pass="1" fail="0">Proxima</stat>
+<stat pass="1" fail="0">Sanity</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Demo">TestSuite.Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
